@@ -15,7 +15,7 @@ def empty(self):
         if len(item) == 0:
             return print("Stack is empty!")
         else:
-            return print("Stack present eliment is =", item)
+            return print("Stack present eliment is =", item), print('Stack lenth',len(item))
 
     # check lenthe of stack
 def size():
@@ -25,7 +25,7 @@ def size():
             return print('stack size=',len(item))
 
     # Element push in stack
-def push(Value):
+def push(item,Value):
         item.append(Value)
     # Element pop in stack
 def pop(item):
@@ -36,35 +36,35 @@ def pop(item):
     # check the top value in stack
 def top(self):
         return print("Stack Top Value is =",item[-1])
-# function calling   
+# function calling  
 item = []
 #check Stack empty or not
 empty(item)
 # check lenthe of stack
-print('stack size=', len(item))
+# print('stack size=', len(item))
 # Pushing Start
 print("Start Added element in stack")
-push(item.append(int(input('Pushing eliment 1st:-'))))
-push(item.append(int(input('Pushing eliment 2nd:-'))))
-push(item.append(int(input('Pushing eliment 3rd:-'))))
-push(item.append(int(input('Pushing eliment 4th:-'))))
-push(item.append(int(input('Pushing eliment 5th:-'))))
+push(item, int(input('Pushing eliment 1st:-')))
+push(item, int(input('Pushing eliment 1st:-')))
+push(item, int(input('Pushing eliment 1st:-')))
+push(item, int(input('Pushing eliment 1st:-')))
+push(item, int(input('Pushing eliment 1st:-')))
 print("After Pushing updated stack is :-",item)
 print('stack size=', len(item))
 
 # POP from stack is start
 
 print("Start Deleted element in stack:")
-print('OUT OF STACK 1st :-', pop())
 # check top value
+print('OUT OF STACK 1nd :-', pop(item))
 top(item)
-print('OUT OF STACK 2nd :-', pop())
-print('OUT OF STACK 3rd :-', pop())
-print('OUT OF STACK 4th :-', pop())
-print('OUT OF STACK 5th :-', pop())
-
+print('OUT OF STACK 2nd :-', pop(item))
+print('OUT OF STACK 3rd :-', pop(item))
+print('OUT OF STACK 4th :-', pop(item))
+print('OUT OF STACK 5th :-', pop(item))
 
 # after poping check stack empty or not
+empty(item)
 print()
 """Footer Session"""
 print("".center(35, "="))
