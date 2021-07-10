@@ -104,3 +104,21 @@ if __name__ == '__main__':
     link_list.print_linked_list()
     print('After Insert Linked List Lenght:-',link_list.get_length())
 
+
+ def remove(self, remove_item):
+      pre = self.head
+      if pre is not None:
+         if pre.data == remove_item:
+            self.head = pre.next
+            pre = None
+            return
+
+      # while pre is not None:
+      #    if pre.data == remove_item:
+      #       break
+      prev = pre
+      pre = pre.next
+      if pre == None:
+         return
+      prev.next = pre.next
+      pre = None
